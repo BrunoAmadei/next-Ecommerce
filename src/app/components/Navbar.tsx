@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
+import { SignedIn, SignedOut } from '@clerk/nextjs/app-beta';
+import { SignInButton, UserButton } from '@clerk/nextjs';
+import Cart from './Cart';
 
 function Navbar() {
   return (
@@ -11,7 +13,7 @@ function Navbar() {
         Next Store
       </Link>
       <div className='flex items-center gap-8'>
-        
+        <Cart />
         <div>
           <SignedIn>
             <UserButton />
